@@ -12,6 +12,7 @@ const PianoKey: FC<PianoKeyProps> = ({
 }) => {
     const { classes, cx } = useStyles();
     const whiteKeys = keys.filter(key => !key?.black);
+    const isTouch = matchMedia('(hover: none)').matches;
 
     return (
         <button
@@ -22,10 +23,14 @@ const PianoKey: FC<PianoKeyProps> = ({
                     left: ((100 / whiteKeys.length) * currentWhiteKeyIndex) + '%',
                 },
             })}
-            onTouchStart={onKeyDown}
-            onTouchEnd={onKeyUp}
-            onMouseDown={onKeyDown}
-            onMouseUp={onKeyUp}
+            {...(isTouch && {
+                onTouchStart: onKeyDown,
+                onTouchEnd: onKeyUp,
+            })}
+            {...(!isTouch && {
+                onMouseDown: onKeyDown,
+                onMouseUp: onKeyUp,
+            })}
         />
     );
 };
