@@ -25,6 +25,7 @@ const useStyles = makeStyles()(
             background: '#fff',
             border: '0.12vw solid #000',
             borderRadius: '0 0 0.4vw 0.4vw',
+            userSelect: 'none',
 
             '&::before': {
                 content: '""',
@@ -46,6 +47,7 @@ const useStyles = makeStyles()(
             transform: 'translateX(-50%)',
             borderRadius: '0 0 0.2vw 0.2vw',
             border: '.12vw solid #000',
+            userSelect: 'none',
         },
         keyBlackPressed: {
             borderRightColor: theme.colors.secondaryDark,
