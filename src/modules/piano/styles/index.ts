@@ -45,11 +45,12 @@ const useStyles = makeStyles()(
             height: '60%',
             transform: 'translateX(-50%)',
             borderRadius: '0 0 0.2vw 0.2vw',
-            border: '1px solid #000',
-            borderTop: 'none',
+            border: '.12vw solid #000',
         },
         keyBlackPressed: {
-            borderColor: theme.colors.secondaryDark,
+            borderRightColor: theme.colors.secondaryDark,
+            borderBottomColor: theme.colors.secondaryDark,
+            borderLeftColor: theme.colors.secondaryDark,
         },
     }),
 );
