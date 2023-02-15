@@ -1,3 +1,5 @@
-# Piano for baby in JavaScript
+# Piano for baby
 
-Demo is on [Create React App](https://github.com/facebook/create-react-app).
+Piano for my baby in JavaScript.
+
+Demo is [here](https://main.d1w896f9qcnsnn.amplifyapp.com/).
