@@ -23,6 +23,7 @@ const PianoKey: FC<PianoKeyProps> = ({
                 },
             })}
             onTouchStart={onKeyDown}
+            onTouchEnd={onKeyUp}
             onMouseDown={onKeyDown}
             onMouseUp={onKeyUp}
         />
