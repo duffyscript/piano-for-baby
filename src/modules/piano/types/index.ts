@@ -1,7 +1,22 @@
+import type { TeacherSceneType, SetSceneType } from "../../teacher/types";
+
 export type PianoKeyProps = {
-    isPressed: boolean;
+    name: string;
     isBlack: boolean;
     currentWhiteKeyIndex: number;
-    onKeyDown: () => void;
-    onKeyUp: () => void;
+    scene: TeacherSceneType;
+    setScene: SetSceneType;
+};
+
+export type PianoKeyboardKeysProps = {
+    scene: TeacherSceneType;
+    setScene: SetSceneType;
+};
+
+export type TeacherCongratulionsProps = {
+    finished: boolean;
+}
+
+export type TeacherIconContainerProps = {
+    toneName: string;
 }

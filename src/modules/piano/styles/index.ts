@@ -2,7 +2,7 @@ import { makeStyles } from '../../base/theme';
 
 const useStyles = makeStyles()(
     (theme) => ({
-        "root": {
+        root: {
             width: '98vw',
             position: 'absolute',
             top: '50%',
@@ -21,11 +21,20 @@ const useStyles = makeStyles()(
         },
         key: {
             all: 'unset',
+            userSelect: 'none',
+            position: 'relative',
+
+            '&:focus': {
+                outline: 'none',
+                boxShadow: 'none',
+            },
+        },
+        keyWhite: {
             width: 'calc(100% / 14)',
             background: '#fff',
             border: '0.12vw solid #000',
             borderRadius: '0 0 0.4vw 0.4vw',
-            userSelect: 'none',
+            zIndex: 1,
 
             '&::before': {
                 content: '""',
@@ -34,20 +43,19 @@ const useStyles = makeStyles()(
                 paddingBottom: '400%',
             },
         },
-        keyPressed: {
-            background: theme.colors.secondary,
-        },
         keyBlack: {
-            all: 'unset',
             position: 'absolute',
             left: '0',
+            zIndex: 2,
             background: '#000',
             width: 'calc(100% / 14 / 1.7)',
             height: '60%',
             transform: 'translateX(-50%)',
             borderRadius: '0 0 0.2vw 0.2vw',
             border: '.12vw solid #000',
-            userSelect: 'none',
+        },
+        keyPressed: {
+            background: theme.colors.secondary,
         },
         keyBlackPressed: {
             borderRightColor: theme.colors.secondaryDark,

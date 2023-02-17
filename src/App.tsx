@@ -1,11 +1,11 @@
-import Piano from "./modules/piano/components/Piano";
+import {Piano} from "./modules/piano";
 
 function App() {
-  return (
-    <div className="app">
-      <Piano/>
-    </div>
-  );
+    return (
+        <div className="app">
+            <Piano/>
+        </div>
+    );
 }
 
 export default App;
