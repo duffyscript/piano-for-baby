@@ -53,7 +53,7 @@ const PianoKey: FC<PianoKeyProps> = ({
             })}
             {...(isTouch && {
                 onTouchStart: handleKeyDown,
-                onTouchEnd: handleKeyDown,
+                onTouchEnd: handleKeyUp,
             })}
             {...(!isTouch && {
                 onMouseDown: handleKeyDown,
