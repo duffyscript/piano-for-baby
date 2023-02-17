@@ -57,6 +57,7 @@ const useStyles = makeStyles()(
             borderRadius: '50%',
             background: theme.colors.gray,
             color: '#fff',
+            '-webkit-text-fill-color': '#fff',
             textAlign: 'center',
             fontWeight: '700',
             fontSize: '2.5vw',
