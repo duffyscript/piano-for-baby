@@ -8,6 +8,10 @@ class SoundSourceManager {
     private soundExt = 'mp3';
     private finalFilename = '';
 
+    /**+
+     * Get path to mp3 file by tone name
+     * @param name
+     */
     getToneSource (name: string) {
         this.makeFilenameFromTone(name);
 
