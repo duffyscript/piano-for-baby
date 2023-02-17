@@ -13,6 +13,7 @@ const useStyles = makeStyles()(
             transform: 'translateX(-50%)',
             opacity: 0,
             transition: 'opacity 500ms',
+            pointerEvents: 'none',
         },
         iconShowed: {
             opacity: 1,
@@ -50,6 +51,7 @@ const useStyles = makeStyles()(
         },
         button: {
             all: 'unset',
+            userSelect: 'none',
             width: '4vw',
             height: '4vw',
             borderRadius: '50%',
