@@ -10,8 +10,6 @@ const useNewVersion = () => {
     useEffect(() => {
         if (showReload && waitingWorker) {
             toast(<NewVersion onClick={() => reloadPage()}/>);
-        } else {
-            //toast.dismiss();
         }
     }, [waitingWorker, showReload, reloadPage]);
 };
