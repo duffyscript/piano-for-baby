@@ -12,6 +12,8 @@ import handleStudy from "../../teacher/eventHandlers/handleStudy";
 const PianoKey: FC<PianoKeyProps> = ({
     name,
     isBlack,
+    isFirst,
+    isLast,
     currentWhiteKeyIndex,
     scene,
     setScene,
@@ -44,9 +46,22 @@ const PianoKey: FC<PianoKeyProps> = ({
 
     return (
         <button
-            {...(!isBlack && {className: cx(classes.key, classes.keyWhite, isPressed && classes.keyPressed)})}
+            {...(!isBlack && {
+                className: cx(
+                    classes.key,
+                    classes.keyWhite,
+                    isPressed && classes.keyPressed,
+                    isFirst && classes.keyFirst,
+                    isLast && classes.keyLast,
+                ),
+            })}
             {...(isBlack && {
-                className: cx(classes.key, classes.keyBlack, isPressed && classes.keyPressed, isPressed && classes.keyBlackPressed),
+                className: cx(
+                    classes.key,
+                    classes.keyBlack,
+                    isPressed && classes.keyPressed,
+                    isPressed && classes.keyBlackPressed,
+                ),
                 style: {
                     left: ((100 / whiteKeys.length) * currentWhiteKeyIndex) + '%',
                 },

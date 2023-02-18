@@ -29,6 +29,12 @@ const useStyles = makeStyles()(
                 boxShadow: 'none',
             },
         },
+        keyFirst: {
+            borderTopLeftRadius: '1vw',
+        },
+        keyLast: {
+            borderTopRightRadius: '1vw',
+        },
         keyWhite: {
             width: 'calc(100% / 14)',
             background: '#fff',

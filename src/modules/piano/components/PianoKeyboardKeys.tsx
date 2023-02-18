@@ -10,7 +10,7 @@ const PianoKeyboardKeys: FC<PianoKeyboardKeysProps> = ({ scene, setScene }) => {
 
     return (
         <div className={classes.keyboardKeys}>
-            {keys.map(key => {
+            {keys.map((key, index) => {
                 const isBlack = !!key?.black;
 
                 if (!isBlack) {
@@ -21,6 +21,8 @@ const PianoKeyboardKeys: FC<PianoKeyboardKeysProps> = ({ scene, setScene }) => {
                     <PianoKey
                         name={key.name}
                         key={key.name}
+                        isFirst={index === 0}
+                        isLast={(keys.length - 1) === index}
                         {...{ isBlack, scene, setScene }}
                         currentWhiteKeyIndex={whiteKeyIndex}
                     />
