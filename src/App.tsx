@@ -1,9 +1,13 @@
-import {Piano} from "./modules/piano";
+import { Piano } from "./modules/piano";
+import { Notification, useNewVersion } from "./modules/versionNotification";
 
 function App() {
+    useNewVersion();
+
     return (
         <div className="app">
-            <Piano/>
+            <Notification />
+            <Piano />
         </div>
     );
 }

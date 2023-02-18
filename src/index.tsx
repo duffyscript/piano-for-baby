@@ -14,15 +14,7 @@ root.render(
   </React.StrictMode>,
 );
 
-serviceWorkerRegistration.register({
-    onUpdate: (registration: any) => {
-        alert('New version available!  Ready to update?');
-        if (registration && registration.waiting) {
-            registration.waiting.postMessage({ type: 'SKIP_WAITING' });
-        }
-        window.location.reload();
-    },
-});
+serviceWorkerRegistration.register();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
