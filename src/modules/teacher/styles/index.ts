@@ -47,6 +47,7 @@ const useStyles = makeStyles()(
             top: '2vw',
             right: '2vw',
             display: 'flex',
+            gridGap: '.6vw',
             gap: '.6vw',
         },
         button: {
@@ -57,7 +58,7 @@ const useStyles = makeStyles()(
             borderRadius: '50%',
             background: theme.colors.gray,
             color: '#fff',
-            '-webkit-text-fill-color': '#fff',
+            WebkitTextFillColor: '#fff',
             textAlign: 'center',
             fontWeight: '700',
             fontSize: '2.5vw',
